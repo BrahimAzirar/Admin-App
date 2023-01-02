@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function Menu() {
+export default function Menu({CassClass}) {
   return (
-    <ul>
+    <ul className={`${CassClass} MyMenu`}>
         <li>Add Users</li>
         <li>Show Users</li>
     </ul>
