@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 
+import Menu from '../Menu';
+
 export default function UsersInfo() {
 
   const [InputName, setInputName] = useState('FirstName');
 
   return (
     <div>
+      <Menu />
       <div>
         <h2>Admin Page</h2>
         <form>
