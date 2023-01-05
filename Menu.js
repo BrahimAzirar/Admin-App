@@ -1,12 +1,10 @@
 import React from 'react'
-import UsersInfo from './Show_Info/UsersInfo';
-import AddUsers from './Add_Info/AddUsers';
 
-export default function Menu({CassClass, ChangeContent}) {
+export default function Menu({CassClass}) {
   return (
     <ul className={`${CassClass} MyMenu`}>
-        <li onClick={() => ChangeContent(<AddUsers />)}>Add Users</li>
-        <li onClick={() => ChangeContent(<UsersInfo />)}>Show Users</li>
+        <li><a href="/AddUsers">Add Users</a></li>
+        <li><a href="/">Show Users</a></li>
     </ul>
   );
 }
