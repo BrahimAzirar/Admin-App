@@ -35,7 +35,7 @@ body, body > div{
 
 
 
-/* ======================================    Menu.js     ============================================== */
+/* ======================================    /Menu.js     ============================================== */
 
 
 
@@ -43,3 +43,27 @@ body, body > div{
 .add > div {
     height: fit-content;
 }
+
+
+/* ======================================    UsersInfo.js     ============================================== */
+
+.ParentOfTable {
+    overflow-x: hidden;
+}
+
+table, tbody {
+    height: fit-content;
+}
+
+td {
+    padding: 7px 0 !important;
+}
+
+td:last-of-type {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+/* ======================================    /UsersInfo.js     ============================================== */

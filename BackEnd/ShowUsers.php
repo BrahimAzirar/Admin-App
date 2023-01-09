@@ -10,7 +10,13 @@
     $val = $_POST['val'];
 
     if ($val) {
-        $GetUsers = $connect -> prepare ("SELECT * FROM users WHERE $name LIKE '%$val%'");
+
+        if ($name == "id") {
+            $GetUsers = $connect -> prepare ("SELECT * FROM users WHERE $name LIKE '$val'");
+        } else {
+            $GetUsers = $connect -> prepare ("SELECT * FROM users WHERE $name LIKE '%$val%'");
+        }
+
         $GetUsers -> execute();
 
         foreach ($GetUsers as $value) {
