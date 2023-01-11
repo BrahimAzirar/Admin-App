@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { AiTwotoneDelete } from "react-icons/ai";
 import { BiPencil } from 'react-icons/bi';
-import AddUsers from '../Add_Info/AddUsers';
+import ModifyData from './EditeData';
 
-export default function UsersInfo() {
+export default function UsersInfo({modify, addClass}) {
 
   const [InputName, setInputName] = useState('FirstName');
   const [data, setData] = useState([]);
@@ -105,8 +105,13 @@ export default function UsersInfo() {
       .then(err => console.log(err));
   }
 
-  function EditeData() {
-    document.body.append(<AddUsers />);
+  function EditeData(e) {
+
+    const eleArray = Array.from(e.target.parentElement.parentElement.parentElement.children).slice(0, 5);
+    const PrevData = eleArray.map(ele => ele.textContent);
+
+    modify(<ModifyData mod={modify} add={addClass} Prev={PrevData}/>);
+    addClass('Cancel');
   }
 
   return (

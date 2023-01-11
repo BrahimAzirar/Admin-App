@@ -1,7 +1,6 @@
 <?php
 
     header('Access-Control-Allow-Origin: http://localhost:3000/#');
-    header("Content-Type: JSON");
 
     $FirstName = $_POST['FirstName'];
     $LastName = $_POST['LastName'];
